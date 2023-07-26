@@ -158,18 +158,39 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
+   if (num <= 1) return false
+   if (num === 2) return true
+   var numeroEsPrimo;
+   for(i = 2; i < num ; i++) {
+      if ( num % i === 0) {
+         numeroEsPrimo = false
+         break;
+      }else{
+         numeroEsPrimo = true
+      }
+   }
+   return numeroEsPrimo
 }
 
 function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
    // Caso contrario, retornar "Soy falso".
    // Tu código:
+   if (valor === true)
+   return "Soy verdadero"
+   return "Soy falso"
 }
 
 function tieneTresDigitos(num) {
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
+   var numToString = num.toString()
+   if (numToString.length === 3){
+      return true;
+   }else{
+      return false
+   }
 }
 
 function doWhile(num) {
@@ -177,6 +198,13 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
+   var i = 0
+   var valorFinal = num
+   do {
+      i++
+      valorFinal = valorFinal + 5
+   }while (i < 8);
+   return valorFinal
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
